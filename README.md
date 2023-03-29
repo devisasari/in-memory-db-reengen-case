@@ -6,21 +6,22 @@ This project is a simple in-memory database implemented in pure JavaScript using
 To get started with this project, follow these steps:
 
 Clone this repository to your local machine:
-
+```
 git clone https://github.com/devisasari/in-memory-db-reengen-case.git
-
+```
 Install the dependencies:
-
+```
 yarn install
-
+```
 Start the development server:
-
+```
 yarn dev
-
+```
 ## Testing
 To run the tests for this project, simply run the following command in your terminal:
-
+```
 yarn test
+```
 This will run the test suite defined in the tests folder using the Vitest testing framework.
 
 ## Technologies Used
@@ -30,45 +31,45 @@ This project uses the following technologies:
 
 ## Usage
 To use this database, simply import the DB class from the db.js file in your JavaScript project:
-
+```javascript
 import DB from './database/db.js';
-
+```
 Create a new database
 To create a new database, simply create a new instance of the DB class:
 
-
+```javascript
 const db = new DB();
-
+```
 Create a new table
 To create a new table in a database, call the createTable() method of the DB instance and pass the table name and columns as parameters:
 
-
+```javascript
 db.createTable('fruit', { name: 'string', quantity: 'int' });
-
+```
 Insert records
 To insert records into a table, first obtain the table instance using the getTable() method of the DB instance, and then call the insertRecords() method of the table instance and pass the data as a parameter:
 
-
+```javascript
 const table = db.getTable('fruit');
 
 table.insertRecords({ name: 'Apple', quantity: 20 });
 table.insertRecords({ name: 'Banana', quantity: 30 });
-
+```
 Get all records
 To get all records from a table, call the getAllRecords() method of the table instance:
 
-
+```javascript
 const allRecords = table.getAllRecords();
-
+```
 Filter records
 To filter records based on one or more columns, call the filterRecords() method of the table instance and pass the filter criteria as an object:
 
-
+```javascript
 const filteredRecords = table.filterRecords({ name: 'Apple' });
-
+```
 ## Example
 Here is an example of how to use the in-memory database to create a new database, create a new table, insert records into the table, and retrieve filtered records:
-
+```javascript
 import DB from './database/db.js';
 
 // create a new database
@@ -90,7 +91,7 @@ const allRecords = table.getAllRecords();
 
 // filter records from the table
 const filteredRecords = table.filterRecords({ name: 'Apple' });
-
+```
 
 ## About the Reengen case:
 
@@ -104,7 +105,7 @@ Implement a simple in-memory database:
 Code in pure JavaScript. No external libraries are allowed.
 
 Examples are as follows:
-
+```javascript
 // Create a new database
 let db = new DB();
 
@@ -123,3 +124,4 @@ table.getAllRecords();
 
 // Return matching records for name: 'Apple'
 table.filterRecords({ name: 'Apple' });
+```
