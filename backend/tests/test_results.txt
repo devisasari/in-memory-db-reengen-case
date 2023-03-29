@@ -1,0 +1,9 @@
+ ✓ backend/tests/table.test.js (7)
+ ✓ backend/tests/db.test.js (5)
+ ✓ backend/tests/validator.test.js (5)
+ ✓ backend/tests/record.test.js (3)
+
+ Test Files  4 passed (4)
+      Tests  20 passed (20)
+   Start at  01:15:01
+   Duration  1.15s (transform 79ms, setup 0ms, collect 214ms, tests 44ms)

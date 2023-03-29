@@ -1,5 +1,5 @@
-import Record from './record.js';
-import Validator from '../utils/validator.js';
+import Record from "./record.js";
+import Validator from "../utils/validator.js";
 
 class Table {
   constructor(columns) {
@@ -9,7 +9,7 @@ class Table {
 
   insertRecords(data) {
     if (Array.isArray(data)) {
-      data.forEach(record => this.insertRecord(record));
+      data.forEach((record) => this.insertRecord(record));
     } else {
       this.insertRecord(data);
     }
@@ -39,7 +39,7 @@ class Table {
   }
 
   filterRecords(filters) {
-    return this.records.filter(record => {
+    return this.records.filter((record) => {
       for (const key in filters) {
         if (filters.hasOwnProperty(key)) {
           const value = filters[key];
